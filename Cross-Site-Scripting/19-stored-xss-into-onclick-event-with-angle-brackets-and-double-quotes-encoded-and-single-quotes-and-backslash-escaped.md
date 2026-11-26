@@ -27,7 +27,7 @@ Because `<`, `>`, and `"` are HTML-encoded, there's no way to escape the attribu
 ## Explanation
 This lab is intentionally harder than Lab 17 precisely because the naive "single extra backslash" bypass is closed — both `'` and `\` are escaped by the filter, so the string delivered to the browser is fully neutralized under most straightforward escaping implementations. In practice, solving this lab means testing the target's *specific* escaping logic for edge cases (such as how it handles a `\` immediately followed by another `\` or `'`, and whether escaping is applied in one pass or multiple passes), since a flawed implementation can still be coaxed into emitting an unescaped quote even when it believes both dangerous characters are covered. Document the exact final rendered JavaScript you observed in Burp/DevTools for your own notes, since the working payload is specific to how this lab's filter is implemented.
 
-## Screenshort
+## Screenshots
 `c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (852).png`
 
 ## Remediation

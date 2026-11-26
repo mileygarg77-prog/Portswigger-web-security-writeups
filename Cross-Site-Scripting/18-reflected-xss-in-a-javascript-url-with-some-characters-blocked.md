@@ -28,7 +28,7 @@ This payload never directly calls `alert(1337)` with parentheses the filter can 
 - `window+''` forces JavaScript to coerce `window` to a string for concatenation, which calls `.toString()` on it — triggering the overridden `toString`, which throws `1337`.
 - Because `window.onerror` was already set to `alert`, the thrown exception is caught by the global error handler and passed to `alert()`, popping the dialog — all without the payload itself containing a direct, parenthesized call to `alert(...)`.
 
-## Screenshort
+## Screenshots
 `c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (851).png`
 
 ## Remediation

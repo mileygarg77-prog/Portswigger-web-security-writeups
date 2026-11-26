@@ -30,7 +30,7 @@ Both `'` and `\` in the input are backslash-escaped before being inserted, so a 
 ## Explanation
 Escaping `'` and `\` only prevents breaking out of the *JavaScript string literal* — it does nothing to stop the surrounding HTML parser from seeing a literal `</script>` tag inside the reflected value. The browser's HTML parser closes the original `<script>` block as soon as it encounters `</script>`, regardless of what JavaScript thought it was doing with escaped quotes. A fresh `<script>alert(1)</script>` tag then starts clean, outside the original (now-broken) string context entirely, and executes without needing to touch a single quote or backslash at all.
 
-## Screenshort
+## Screenshots
 `c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (847).png`
 
 ## Remediation

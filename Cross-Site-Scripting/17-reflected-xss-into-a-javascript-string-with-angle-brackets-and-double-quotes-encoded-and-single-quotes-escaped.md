@@ -34,7 +34,7 @@ var searchTerm = '\\';alert(document.domain)//';
 ```
 JavaScript reads `\\` as a single literal backslash character (not an escape sequence), which means the following `'` is **not** escaped after all — it genuinely closes the string literal. Everything after that, `;alert(document.domain)`, runs as a real JavaScript statement, and the trailing `//` comments out the rest of the original line (including the closing `';` the application appends), so there's no syntax error.
 
-## Screenshort
+## Screenshots
 `c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (850).png`
 
 ## Remediation
