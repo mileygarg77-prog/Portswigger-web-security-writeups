@@ -23,7 +23,8 @@ Input sanitization blocks obvious tags/keywords (e.g. `<script>`, `onerror`) but
 Blocklist-based filters typically target well-known XSS sinks like `onerror`/`onload` on `<img>`/`<svg>` but overlook SVG's animation-related event attributes such as `onbegin` on `<animatetransform>`, which fires as soon as the animation starts, giving an alternate path to script execution that bypasses the filter entirely.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (842).png`
+![Lab 11 Screenshot](screenshots/11-xss.png)
+
 
 ## Remediation
 Replace blocklist filtering with an allow-list HTML/SVG sanitizer (e.g. DOMPurify) that only permits a known-safe set of tags/attributes, rather than trying to enumerate every dangerous one.

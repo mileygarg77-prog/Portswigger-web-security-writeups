@@ -23,7 +23,8 @@ ${alert(1)}
 A JS template literal evaluates anything inside `${ }` as a live JavaScript expression at runtime. Because this payload uses none of the characters the filter escapes (no quotes, backticks, or backslashes), it passes straight through untouched, and the browser executes `alert(1)` as soon as the template literal is evaluated.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (853).png`
+
+![Lab 13 Screenshot](screenshots/13-xss.png)
 
 ## Remediation
 Never interpolate untrusted input directly into a JS template literal; if dynamic text must be shown, insert it via safe DOM text APIs after the script has already built the literal, not by splicing user data into the source of the literal itself.

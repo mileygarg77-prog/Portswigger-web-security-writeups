@@ -35,7 +35,8 @@ var searchTerm = '\\';alert(document.domain)//';
 JavaScript reads `\\` as a single literal backslash character (not an escape sequence), which means the following `'` is **not** escaped after all — it genuinely closes the string literal. Everything after that, `;alert(document.domain)`, runs as a real JavaScript statement, and the trailing `//` comments out the rest of the original line (including the closing `';` the application appends), so there's no syntax error.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (850).png`
+![Lab 17 Screenshot](screenshots/17-xss.png)
+
 
 ## Remediation
 Never rely on a single escaping pass that assumes the attacker's input contains no backslashes of its own; escape backslashes *before* escaping quotes (so `\` → `\\` happens first), or better, avoid splicing user input into inline script at all — pass it through a safe JSON-encoding function or a `data-*` attribute read by the script instead.

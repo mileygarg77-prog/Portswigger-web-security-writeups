@@ -29,7 +29,8 @@ This payload never directly calls `alert(1337)` with parentheses the filter can 
 - Because `window.onerror` was already set to `alert`, the thrown exception is caught by the global error handler and passed to `alert()`, popping the dialog — all without the payload itself containing a direct, parenthesized call to `alert(...)`.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (851).png`
+![Lab 18 Screenshot](screenshots/18-xss.png)
+
 
 ## Remediation
 Character/keyword blocklist filters for XSS are fundamentally unreliable because JavaScript offers many equivalent ways to achieve the same effect (implicit coercion, operator overloading, event handlers) without using any specific "dangerous" token. The real fix is to never reflect user input into an executable JavaScript context at all; if dynamic values must reach client-side script, pass them through a safely JSON-encoded data attribute instead.

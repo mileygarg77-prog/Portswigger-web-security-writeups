@@ -23,7 +23,8 @@ The search term is reflected as `<input value="YOUR INPUT">`, with `<` and `>` H
 Because the double quote isn't encoded, the payload closes the existing `value="..."` attribute early and appends a brand-new `onmouseover` attribute onto the same `<input>` tag, which fires JavaScript as soon as the victim's mouse moves over the field — all without ever needing a literal `<script>` tag.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (845).png`
+![Lab 07 Screenshot](screenshots/07-xss.png)
+
 
 ## Remediation
 HTML-attribute-encode *all* characters that are meaningful in that context, including quotes, not just angle brackets; prefer a vetted auto-escaping templating engine over manual encoding.

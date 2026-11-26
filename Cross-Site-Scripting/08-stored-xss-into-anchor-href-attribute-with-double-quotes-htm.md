@@ -23,7 +23,8 @@ javascript:alert(document.cookie)
 Since quote-escaping only stops attribute *breakout*, it does nothing to stop the attribute's *value* itself from being a dangerous URI scheme. Clicking the rendered link causes the browser to execute the `javascript:` payload instead of navigating anywhere, and because the comment is stored, this fires for every visitor who clicks the link.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (843).png`
+![Lab 08 Screenshot](screenshots/08-xss.png)
+
 
 ## Remediation
 Enforce an allow-list of acceptable URL schemes (`http`, `https`, `mailto`, etc.) for any user-supplied link, in addition to attribute encoding.

@@ -31,7 +31,8 @@ Both `'` and `\` in the input are backslash-escaped before being inserted, so a 
 Escaping `'` and `\` only prevents breaking out of the *JavaScript string literal* — it does nothing to stop the surrounding HTML parser from seeing a literal `</script>` tag inside the reflected value. The browser's HTML parser closes the original `<script>` block as soon as it encounters `</script>`, regardless of what JavaScript thought it was doing with escaped quotes. A fresh `<script>alert(1)</script>` tag then starts clean, outside the original (now-broken) string context entirely, and executes without needing to touch a single quote or backslash at all.
 
 ## Screenshots
-`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (847).png`
+![Lab 16 Screenshot](screenshots/16-xss.png)
+
 
 ## Remediation
 Encode `<` and `>` (not just quotes/backslashes) wherever user input is reflected inside or near a `<script>` block, and prefer passing dynamic data to scripts via a separate JSON-encoded `<script type="application/json">` data island or a `data-*` attribute rather than splicing it into executable JS source.
