@@ -25,7 +25,7 @@ portswigger-writeups/
 | Category | Labs Covered | Index |
 |---|---|---|
 | SQL Injection | 17 | [SQL-Injection/README.md](./SQL-Injection/README.md) |
-| Cross-Site Scripting (XSS) | 15 | [Cross-Site-Scripting/README.md](./Cross-Site-Scripting/README.md) |
+| Cross-Site Scripting (XSS) | 19 | [Cross-Site-Scripting/README.md](./Cross-Site-Scripting/README.md) |
 
 Each writeup follows the same format: **Objective → Vulnerability → Steps to Reproduce → Payload(s) Used → Explanation → Screenshots → Remediation**.
 
@@ -44,4 +44,4 @@ Suggested naming convention: `<category>-lab-<number>-<step>.png` (e.g. `xss-lab
 These writeups document vulnerabilities in PortSwigger's intentionally-vulnerable training labs, used strictly for learning purposes. No real-world systems were tested.
 
 ---
-*Maintained by Miley — B.Tech CSE (Cybersecurity), SRM University Delhi-NCR.*
+
