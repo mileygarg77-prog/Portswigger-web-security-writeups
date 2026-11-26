@@ -22,9 +22,6 @@ Blocklist-based sanitization specifically targets `on\w+=` patterns and `href=`,
 ## Explanation
 `ontoggle` is a legitimate HTML event attribute but far less commonly included in blocklists than `onclick`/`onerror`/`onload`. Setting `open` on the `<details>` element causes the `toggle` event — and therefore the attacker's script — to fire automatically as soon as the element renders, with no `href` or blocked `on*` keyword matched by a naive filter.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-14-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Use an allow-list sanitizer scoped to a minimal safe tag/attribute set rather than trying to blocklist dangerous attribute names, since HTML has dozens of event attributes beyond the common ones.
 

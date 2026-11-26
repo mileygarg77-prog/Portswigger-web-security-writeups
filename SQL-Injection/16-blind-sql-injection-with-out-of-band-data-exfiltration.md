@@ -23,9 +23,6 @@ TrackingId=x'||(SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8
 ## Explanation
 By concatenating the subquery result (the administrator's password) directly into the hostname Oracle is told to resolve, the password is smuggled out via the DNS query name itself. Burp Collaborator logs the exact subdomain that was looked up, revealing the password in plaintext in the interaction log without ever needing to brute-force individual characters.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-16-01.png`_
-
 ## Remediation
 Same as lab 15: block outbound DNS/HTTP callbacks from the database server, strip dangerous XML/network functions, and use parameterized queries.
 

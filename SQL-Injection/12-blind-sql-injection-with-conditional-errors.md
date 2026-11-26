@@ -23,9 +23,6 @@ TrackingId=x' AND (SELECT CASE WHEN (username='administrator' AND SUBSTRING(pass
 ## Explanation
 The `CASE ... THEN 1/0` construct only triggers a division-by-zero database error when the inner condition evaluates to TRUE. Since the app surfaces that error as an HTTP 500 but shows 200 otherwise, the presence of a 500 response becomes a reliable one-bit oracle for each guessed condition.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-12-01.png`_
-
 ## Remediation
 Never surface raw database errors differently based on user input; use parameterized queries and generic error handling.
 

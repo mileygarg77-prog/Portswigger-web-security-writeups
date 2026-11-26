@@ -28,9 +28,6 @@ category=Gifts' UNION SELECT NULL,NULL--
 ## Explanation
 `ORDER BY` fails once the index exceeds the number of columns in the result set, so the first index that errors tells you the query has one fewer column. Similarly, a `UNION SELECT` with the wrong number of `NULL`s throws a column-count mismatch error; the first payload that succeeds reveals the correct column count (2, in this lab).
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-03-01.png`_
-
 ## Remediation
 Avoid exposing raw database errors to end users, and use parameterized queries so injected `ORDER BY`/`UNION` clauses are never executed as SQL.
 

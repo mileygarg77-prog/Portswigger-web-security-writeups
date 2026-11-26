@@ -24,9 +24,6 @@ TrackingId=x' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='adm
 ## Explanation
 Because no data is ever reflected, the only signal available is whether the 'Welcome back' message appears. By wrapping a guess in a boolean condition and observing which guesses flip that signal, the full password can be reconstructed character-by-character via a scripted binary search (e.g. with Burp Intruder's cluster bomb/sniper attack and a grep-match rule on 'Welcome back').
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-11-01.png`_
-
 ## Remediation
 Parameterized queries; also avoid conditionally changing visible application behavior based on raw query results tied to user-controllable input.
 

@@ -25,9 +25,6 @@ category=Gifts' UNION SELECT USERNAME_YYYY, PASSWORD_ZZZZ FROM USERS_XXXX--
 ## Explanation
 Oracle doesn't ship `information_schema`; its equivalent metadata lives in `all_tables` and `all_tab_columns`, which are queryable by any authenticated DB session by default, allowing the same enumerate-then-dump approach as on other engines.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-10-01.png`_
-
 ## Remediation
 Least-privilege DB accounts that cannot read Oracle's data dictionary views, plus parameterized queries.
 

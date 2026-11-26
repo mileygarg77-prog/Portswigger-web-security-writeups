@@ -22,9 +22,6 @@ category=Gifts' UNION SELECT NULL, username || '~' || password FROM users--
 ## Explanation
 `||` is the string concatenation operator used by this lab's backend (Oracle-style syntax; use `CONCAT()` or `+` on MySQL/MSSQL respectively). Combining both fields with a delimiter like `~` into the single text-capable column lets both values be exfiltrated even though only one column can render text.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-06-01.png`_
-
 ## Remediation
 Parameterized queries remove the injection point entirely, making column-count/type workarounds irrelevant.
 

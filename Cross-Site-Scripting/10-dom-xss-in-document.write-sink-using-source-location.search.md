@@ -22,9 +22,6 @@ https://LAB-ID.web-security-academy.net/product?productId=1&storeId='-alert(1)-'
 ## Explanation
 As in the JS-string case, using `'-alert(1)-'` breaks out of the single-quoted JavaScript string that `document.write` is building (rather than trying to break raw HTML), executing `alert(1)` as part of the script's own expression evaluation before `document.write` ever renders the final markup.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-10-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Avoid building dynamic markup via `document.write`; validate `storeId` against a known allow-list of valid store identifiers server- or client-side before using it at all.
 

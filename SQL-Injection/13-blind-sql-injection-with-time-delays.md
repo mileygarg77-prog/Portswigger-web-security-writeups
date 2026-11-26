@@ -22,9 +22,6 @@ TrackingId=x' AND SLEEP(5)--
 ## Explanation
 If the response takes roughly 5 seconds longer than a baseline request, the injected `SLEEP(5)` was executed by the database, confirming the `TrackingId` cookie is injectable even though there is no other observable difference in the application's behavior.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-13-01.png`_
-
 ## Remediation
 Parameterized queries; also consider database-level restrictions/timeouts that limit the impact of long-running injected queries.
 

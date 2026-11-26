@@ -23,9 +23,6 @@ TrackingId=x' AND (SELECT CASE WHEN SUBSTRING(password,1,1)='a' THEN SLEEP(5) EL
 ## Explanation
 Because the delay only occurs when the guessed character is correct, timing each request (correct guess ≈ baseline + 5s, incorrect guess ≈ baseline) turns the response-time channel into a full data-exfiltration oracle, letting the entire password be recovered one character at a time without ever seeing it reflected on the page.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-14-01.png`_
-
 ## Remediation
 Parameterized queries; rate-limit or cap query execution time at the database layer to blunt time-based attacks even if an injection flaw exists.
 

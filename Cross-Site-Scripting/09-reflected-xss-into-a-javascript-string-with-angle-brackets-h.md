@@ -23,7 +23,7 @@ The page includes something like `<script>var searchTerm = 'YOUR INPUT'; ...</sc
 This payload doesn't need to close the string with a literal quote-then-semicolon; instead it uses the `-` (subtraction) operator to terminate the original string expression, run `alert(1)` as part of an arithmetic expression, and then re-open a dummy string with another `'` so the remainder of the original line remains syntactically valid JavaScript.
 
 ## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-09-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
+`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (848).png`
 
 ## Remediation
 Never interpolate untrusted data directly into inline `<script>` blocks; instead, pass data to JS via a JSON-encoded, properly escaped data attribute or a dedicated JS string-escaping function, and apply a strict CSP that disallows inline scripts.

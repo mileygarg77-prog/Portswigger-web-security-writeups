@@ -22,9 +22,6 @@ category=Gifts' UNION SELECT @@version, NULL--
 ## Explanation
 `@@version` is a built-in variable on both MySQL and Microsoft SQL Server that returns a descriptive version string, immediately revealing the DBMS type and exact version without needing to guess.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-08-01.png`_
-
 ## Remediation
 Avoid leaking database errors/metadata to clients; parameterized queries prevent the injection outright.
 

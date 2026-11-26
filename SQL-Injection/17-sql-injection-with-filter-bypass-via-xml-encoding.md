@@ -25,9 +25,6 @@ The login request is sent as XML and parsed server-side; the WAF inspects the ra
 ## Explanation
 The WAF pattern-matches on the literal bytes of the HTTP request and never sees the string `' OR 1=1--` because it's hidden inside a custom XML entity declaration. However, the backend's XML parser resolves `&xxe;` into its full payload *before* that value is handed to the SQL query builder, so the injection executes exactly as if it had been sent in plaintext.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-17-01.png`_
-
 ## Remediation
 Never rely on signature-based WAF filtering as the primary defense; disable external/internal DTD processing in the XML parser, and use parameterized queries so even a fully decoded payload cannot alter query structure.
 

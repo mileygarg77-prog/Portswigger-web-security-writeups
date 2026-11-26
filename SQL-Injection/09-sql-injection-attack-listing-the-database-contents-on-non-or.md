@@ -27,9 +27,6 @@ category=Gifts' UNION SELECT username_yyyy, password_zzzz FROM users_xxxx--
 ## Explanation
 `information_schema` is a standard, read-only metadata schema present on most non-Oracle RDBMSes, so even with no prior knowledge of the schema, an attacker can walk from table names to column names to the actual sensitive data in three UNION queries.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-09-01.png`_
-
 ## Remediation
 Revoke SELECT access to `information_schema` for the application's DB account where possible, and use parameterized queries to prevent injection in the first place.
 

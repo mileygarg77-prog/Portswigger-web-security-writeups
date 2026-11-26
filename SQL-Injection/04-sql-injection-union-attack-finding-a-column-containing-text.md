@@ -22,9 +22,6 @@ category=Gifts' UNION SELECT NULL,'a'--
 ## Explanation
 The payload that returns HTTP 200 and displays the literal `a` on the page identifies the column that accepts and displays string data. That column is the one to use for exfiltrating text (usernames, passwords, table/column names) in subsequent UNION attacks.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-04-01.png`_
-
 ## Remediation
 Same as other injection labs: parameterized queries eliminate the ability to inject UNION clauses at all.
 

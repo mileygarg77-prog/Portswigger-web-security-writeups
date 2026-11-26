@@ -22,9 +22,6 @@ https://LAB-ID.web-security-academy.net/?search="><svg onload=alert(1)>
 ## Explanation
 Because the value from `location.search` is written into the DOM via `document.write` with no encoding, closing the `src` attribute's quote (`"`) and the `<img>` tag (`>`) lets an entirely new `<svg onload=...>` element be injected, whose `onload` handler fires immediately and executes the attacker's JavaScript — entirely client-side, so it never touches server logs.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-03-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Avoid `document.write` with untrusted data; use safe DOM APIs (`textContent`, `createElement`) or a templating library that auto-escapes, and validate/encode any data taken from the URL before using it to build markup.
 

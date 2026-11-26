@@ -24,9 +24,6 @@ category=Gifts' UNION SELECT username, password FROM users--
 ## Explanation
 Because the application just concatenates the two `UNION SELECT` columns into the product listing, injecting `username, password` instead of literal strings causes every row of the `users` table to be rendered on the page, directly exposing stored credentials.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-05-01.png`_
-
 ## Remediation
 Parameterized queries; also apply least-privilege database accounts so the web app's DB user cannot read tables (like `users`) it has no legitimate need to query.
 

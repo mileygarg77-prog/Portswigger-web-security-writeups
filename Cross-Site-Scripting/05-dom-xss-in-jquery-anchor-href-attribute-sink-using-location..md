@@ -23,9 +23,6 @@ https://LAB-ID.web-security-academy.net/#returnUrl=javascript:alert(1)
 ## Explanation
 Because the `href` attribute accepts the `javascript:` scheme and the app never validates the URL's scheme before assigning it, clicking the manipulated link causes the browser to execute the JavaScript after `javascript:` instead of navigating to a page.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-05-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Validate that user-supplied URLs use an allow-listed scheme (e.g. only `http:`/`https:`) before using them in `href`, and prefer safe DOM APIs over raw attribute assignment from untrusted sources.
 

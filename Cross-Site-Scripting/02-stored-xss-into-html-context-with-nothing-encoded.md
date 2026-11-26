@@ -23,9 +23,6 @@ The comment's `comment` field is saved as-is and rendered directly into the page
 ## Explanation
 Because the comment is persisted and later rendered without encoding, the payload becomes part of the page's permanent HTML. Every subsequent visitor's browser executes it, making this far more dangerous than reflected XSS since no interaction/clicking a crafted link is required — simply viewing the page triggers it.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-02-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Sanitize/encode stored user content on output (not just input), use an allow-list HTML sanitizer if rich text is required, and set HttpOnly on session cookies to limit impact.
 

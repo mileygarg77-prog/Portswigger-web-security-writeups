@@ -23,7 +23,7 @@ The app reflects the full request URL (used to build a canonical link) into `<li
 By closing the `href` value with a single quote and adding `accesskey`/`onclick` (or similar) attributes to the same `<link>` tag, a user-interaction-triggered event handler is planted directly on an element that would otherwise be invisible metadata, giving the attacker script execution without ever needing a literal angle bracket.
 
 ## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-12-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
+`c:\Users\MILEY\OneDrive\Pictures\Screenshots\Screenshot (846).png`
 
 ## Remediation
 Encode all attribute-breaking characters (quotes, as well as angle brackets) wherever user input is reflected into any tag, including head metadata elements, and apply CSP to block inline event handlers.

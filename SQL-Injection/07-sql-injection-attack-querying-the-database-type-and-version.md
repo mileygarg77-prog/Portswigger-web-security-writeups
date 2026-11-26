@@ -22,9 +22,6 @@ category=Gifts' UNION SELECT banner, NULL FROM v$version--
 ## Explanation
 Oracle doesn't support a version function callable without `FROM`, so the version string must be pulled from the `v$version` system view. The returned `banner` column reveals the exact Oracle release in use.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-07-01.png`_
-
 ## Remediation
 Restrict the database account's privileges so it cannot query system/metadata views, in addition to fixing the injection with parameterized queries.
 

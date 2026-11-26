@@ -23,9 +23,6 @@ TrackingId=x'||(SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8
 ## Explanation
 Oracle's XML parser will attempt to resolve the external entity's URL, which includes a unique Collaborator subdomain. A DNS lookup arriving at Burp Collaborator for that subdomain proves the injected SQL executed server-side, even though the HTTP response itself carries zero observable difference.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/sqli-lab-15-01.png`_
-
 ## Remediation
 Disable or restrict DB features that allow network callbacks (e.g. XML external entity resolution, `UTL_HTTP`), apply egress filtering from the database host, and use parameterized queries.
 

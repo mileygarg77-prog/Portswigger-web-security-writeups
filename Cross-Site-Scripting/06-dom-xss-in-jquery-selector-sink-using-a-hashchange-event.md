@@ -22,9 +22,6 @@ https://LAB-ID.web-security-academy.net/#<img src=1 onerror=alert(1)>
 ## Explanation
 When passed a string that looks like an HTML tag, jQuery's `$()` function will construct and (depending on version/sink) insert that element into the document rather than treating it purely as a CSS selector, so the crafted `<img onerror=...>` tag executes the attacker's script once the hash change handler runs.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-06-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Never feed untrusted, attacker-controlled strings into jQuery's `$()`; validate/escape hash values, and keep jQuery updated since this exact selector/HTML ambiguity has been hardened in newer releases.
 

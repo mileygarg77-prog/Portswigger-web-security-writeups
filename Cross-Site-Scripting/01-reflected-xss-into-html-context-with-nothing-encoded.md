@@ -22,9 +22,6 @@ The `search` query parameter is echoed verbatim into the HTML body of the result
 ## Explanation
 Because the application performs no HTML-encoding on the reflected value, the browser parses the injected `<script>` tag as real markup and executes its contents, firing the alert and proving arbitrary JavaScript execution in the victim's browser context.
 
-## Screenshots
-_Add your screenshots here, e.g. `./screenshots/xss-lab-01-01.png`. If you don't have a screenshot for this lab yet, leave this section as-is or replace with "Screenshot not available for this lab"._
-
 ## Remediation
 Context-aware output encoding (HTML-entity-encode `<`, `>`, `&`, quotes) for any user input reflected into HTML, plus a restrictive Content-Security-Policy.
 
